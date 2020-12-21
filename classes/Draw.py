@@ -1,5 +1,5 @@
 import cv2
-from PIL import Image, ImageDraw
+from PIL import ImageDraw
 
 
 class Draw:
@@ -33,11 +33,9 @@ class Draw:
         cv2.putText(captured_image, predict[0], coordinates, cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
 
     @staticmethod
-    def draw(image_pixels, predict_emotion, box, font_loader=None, padding=0, line_width=3):
-        try:
-            draw = ImageDraw.Draw(image_pixels)
-        except:
-            draw = ImageDraw.Draw(Image.fromarray(image_pixels))
+    def draw(image_pixels, predict_emotion, box, font_loader=None, padding=0):
+        #draw = ImageDraw.Draw(image_pixels)
+        draw = ImageDraw.Draw(image_pixels)
 
         message = predict_emotion
         color = Draw.EMOTION_COLOR_MAP[predict_emotion]
@@ -46,7 +44,7 @@ class Draw:
         x_min, y_min, x_max, y_max = box
 
         # draw the main bounding box outline for the face
-        draw.rectangle([x_min, y_min, x_min+x_max, y_min+y_max], outline=color, width=line_width)
+        draw.rectangle([x_min, y_min, x_min+x_max, y_min+y_max], outline=color)
 
         if font_loader is not None:
             font = font_loader(x_max - x_min)

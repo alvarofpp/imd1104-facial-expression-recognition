@@ -38,13 +38,13 @@ def main():
         'Deep': 'DeepCNN',
         'Deep (Custom)': 'DeepCNNCustom',
         'Shallow': 'ShallowCNN',
-        'VGG-11 (A)': 'VGGA11',
-        'VGG-11 (A-LRN)': 'VGGALRN11',
-        'VGG-13 (B)': 'VGGB13',
-        'VGG-16 (C)': 'VGGC16',
-        'VGG-16 (D)': 'VGGD16',
-        'VGG-19 (E)': 'VGGE19',
-        'VGG-19 (Custom)': 'VGGE19Custom',
+        #'VGG-11 (A)': 'VGGA11',
+        #'VGG-11 (A-LRN)': 'VGGALRN11',
+        #'VGG-13 (B)': 'VGGB13',
+        #'VGG-16 (C)': 'VGGC16',
+        #'VGG-16 (D)': 'VGGD16',
+        #'VGG-19 (E)': 'VGGE19',
+        #'VGG-19 (Custom)': 'VGGE19Custom',
     }
 
     image_file = st.sidebar.file_uploader('Upload Image', type=['jpg', 'png', 'jpeg'])
