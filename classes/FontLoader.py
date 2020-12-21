@@ -49,7 +49,7 @@ class FontLoader:
         -------
         ImageFont.FreeTypeFont
         """
-        return ImageFont.truetype('Pillow/Tests/fonts/FreeMonoBold.ttf', font_size)
+        return ImageFont.truetype('fonts/FreeMonoBold.ttf', font_size)
 
     def __call__(self, img_width):
         """Return the largest ImageFont that does not exceed the image width using the maximum message length
